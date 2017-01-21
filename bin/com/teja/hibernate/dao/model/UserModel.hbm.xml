@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	
+
+	<class name="com.teja.hibernate.dao.model.UserModel"
+		table="Hibernate.User">
+		<meta attribute="class-description" inherit="false">
+			@hibernate.class
+			table="Hibernate.User"
+    </meta>
+
+		<id name="userID" type="java.lang.Integer" column="userID">
+			<meta attribute="field-description">
+				@hibernate.id
+				generator-class="assigned"
+				type="java.lang.Integer"
+				column="userID"
+
+        </meta>
+			<generator class="assigned" />
+		</id>
+		
+		<property name="name" type="java.lang.String" column="name"
+			length="30">
+			<meta attribute="field-description">
+				@hibernate.property
+				column="chainName"
+				length="30"
+        </meta>
+		</property>
+		
+	</class>
+</hibernate-mapping>
